@@ -11,19 +11,16 @@
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-uint32_t red = pixels.Color(255, 0, 0);
-uint32_t blue = pixels.Color(0, 0, 255);
-uint32_t green = pixels.Color(0, 255, 0);
+uint32_t red = pixels.Color(45, 0, 0);
+uint32_t blue = pixels.Color(0, 0, 45);
+uint32_t green = pixels.Color(0, 45, 0);
 uint32_t pixelColour;
 
-float activeColor[] = {255, 0, 0};//sets the default color to red
+float activeColor[] = {45, 0, 0};//sets the default color to red
 
 boolean LEDstate[] = {false, false, false, false, true, false, false, false, false, false, false, false, false, false}; //saves the state of each of the functions
-const char* ssid     = "bowls-cafe";
-//const char* ssid     = "gdw-tokyo";
-//const char* ssid     = "higemegane";
-//const char* password = "tingosunny";
-const char* password = "";
+const char* ssid     = "********";
+const char* password = "********";
 String rawColor;  //raw color to differentiate if the color has changed
 String rawBright; // raw brightness to differentiate if the brightness level has changed
 IPAddress ip(192, 168, 0, 202); //static IP address
